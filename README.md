@@ -2,7 +2,7 @@
 
 ## Link
 
-- Live site: [Github page](https://samsonsham.github.io/uvicode/ "Uvicode")
+- Live site: [Uvicode](https://uvicode.vercel.app "Unicode Converter Site")
 
 ## Screenshots
 
