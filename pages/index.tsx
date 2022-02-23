@@ -29,6 +29,7 @@ const Home: NextPage = () => (
       />
       <meta name="author" content="Samson Sham" />
       <link rel="icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" href="/apple-icon.png" />
     </Head>
     <Header />
     <Converter />
