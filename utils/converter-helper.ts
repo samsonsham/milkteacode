@@ -18,6 +18,7 @@ export const helpers = {
     if (value) {
       return value >= min && value < max;
     }
+    return false;
   },
   dec2hex: (i: number) => {
     let result = '0000';
@@ -34,7 +35,7 @@ export const helpers = {
   },
   char2Charcode: (str: string): number[] => {
     const charCodeArr = [];
-    for (let i = 0; i < str.length; i++) {
+    for (let i = 0; i < str.length; i += 1) {
       charCodeArr.push(str.charCodeAt(i));
     }
     return charCodeArr;
