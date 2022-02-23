@@ -57,6 +57,7 @@ function Header() {
         </NextLink>
         <Button
           backgroundColor="rgba(0, 0, 0, 0.0)"
+          aria-label={colorMode === 'light' ? 'Dark Mode' : 'Light Mode'}
           onClick={toggleColorMode}
           transition="transform .2s"
           _hover={{

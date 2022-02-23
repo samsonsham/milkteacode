@@ -318,13 +318,17 @@ function Converter() {
           </RadioGroup>
         </Stack>
         <Spacer />
-        <Button colorScheme="teal" size="sm" onClick={handleClear} aria-label="clear">
+        <Button colorScheme="teal" size="sm" onClick={handleClear} aria-label="Clear">
           {t('clear')}
         </Button>
       </Stack>
       <Stack direction="row" alignItems="center" ml={2} mt={4}>
         <Text>{t('convert-ascii-char')}</Text>
-        <Switch isChecked={isConvASCII} onChange={() => setIsConvASCII(!isConvASCII)} />
+        <Switch
+          isChecked={isConvASCII}
+          onChange={() => setIsConvASCII(!isConvASCII)}
+          aria-label="Convert ASCII"
+        />
       </Stack>
     </Box>
   );
