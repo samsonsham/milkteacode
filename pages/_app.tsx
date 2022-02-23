@@ -1,7 +1,7 @@
-import type { AppProps } from "next/app";
-import { appWithTranslation } from "next-i18next";
-import { ChakraProvider } from "@chakra-ui/react";
-import theme from "../styles/theme";
+import type { AppProps } from 'next/app';
+import { appWithTranslation } from 'next-i18next';
+import { ChakraProvider } from '@chakra-ui/react';
+import theme from '../styles/theme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

@@ -1,10 +1,10 @@
 {
   "unicode-converter": "Unicode Converter",
   "standard-usage": "Standard Usage",
-  "usage-list-item-1": "Drop the text to upper box or lower box then the conversion will take place in another box on the fly.",
+  "usage-list-item-1": "Drop the text to either box then the conversion will take place in another on the fly.",
   "usage-list-item-2": "The way or direction of conversion is determined by which box is active",
-  "usage-list-item-3": "Clear Button will clear all boxes.",
-  "usage-list-item-4": "Check Box for choosing to convert numbers, letters, punctuation, e.g. A, b, C, 1, 2, 3, ?, !, &",
+  "usage-list-item-3": "Clear Button acts to clear all boxes.",
+  "usage-list-item-4": "Check Box for choosing to convert numbers, letters, punctuation, e.g. A, b, 1, 2, !, &",
   "usage-list-item-5": "No other escapes (e.g. \\n \\t) are supported.",
   "usage-list-item-6": "Lower box only convert when content format matches the radio selection",
   "character": "Chracter",
