@@ -95,13 +95,15 @@ function Converter() {
       }
       // Compile result base on radio button
       const result: string[] = [];
+
       switch (output) {
         case 'codePt':
           if (typeof codeArr[0]?.toString(16) === 'string')
             result.push(`\\u\u007b${codeArr[0]?.toString(16)}\u007d`);
           break;
         case 'htmlEn':
-          if (typeof codeArr[0] === 'string') result.push(`\u0026\u0023${codeArr[0]}\u003b`);
+          if (typeof codeArr[0]?.toString(16) === 'string')
+            result.push(`\u0026\u0023${codeArr[0]}\u003b`);
           break;
         default: {
           u16Body.forEach((item) => {
@@ -255,7 +257,7 @@ function Converter() {
         onFocus={(e) => handleCharFocus(e, true)}
         placeholder="e.g. &#20154;&#20154;&#29983;&#32780;&#24179;&#31561;&#128516;"
         aria-label="Input Box for converting Character"
-        size="sm"
+        fontSize={['xl', 'md', 'md', 'sm']}
         h={150}
         borderWidth={2}
         borderTopWidth={0}
@@ -292,7 +294,7 @@ function Converter() {
         onFocus={(e) => handleU16Focus(e, true)}
         placeholder={getEncodeExample()}
         aria-label={`Input Box for converting ${getEncodeType()}`}
-        size="sm"
+        fontSize={['xl', 'md', 'md', 'sm']}
         h={150}
         borderWidth={2}
         borderTopWidth={0}

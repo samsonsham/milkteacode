@@ -32,13 +32,17 @@ function Header() {
   const color = useColorModeValue('gray.600', 'white');
 
   return (
-    <Box p={2} backgroundColor={bg}>
-      <Flex alignItems="flex-start" color={color}>
+    <Box px={[2, 4, 10, 10]} backgroundColor={bg} h={20}>
+      <Flex
+        alignItems="flex-start"
+        color={color}
+        transform={['translateY(55%)', 'translateY(55%)', 'translateY(40%)', 'translateY(40%)']}
+      >
         <NextLink href="/" passHref>
-          <RepeatIcon w={8} h={8} mr={2} color={color} />
+          <RepeatIcon w={[8, 8, 10, 10]} h={[8, 8, 10, 10]} mr={3} color={color} />
         </NextLink>
         <Text
-          fontSize="2xl"
+          fontSize={['2xl', '2xl', '3xl', '3xl']}
           fontFamily={router.locale === 'en' ? 'Playfair Display' : 'Noto Serif TC'}
         >
           {t('unicode-converter')}
@@ -49,20 +53,24 @@ function Header() {
             backgroundColor="rgba(0, 0, 0, 0.0)"
             icon={<MdTranslate />}
             aria-label="Change Language"
+            fontSize={[20, 20, 24, 24]}
             transition="transform .2s"
             _hover={{
-              transform: 'scale(1.5)',
+              transform: 'scale(1.2)',
             }}
           />
         </NextLink>
         <Button
           backgroundColor="rgba(0, 0, 0, 0.0)"
           aria-label={colorMode === 'light' ? 'Dark Mode' : 'Light Mode'}
+          fontSize={[20, 20, 24, 24]}
           onClick={toggleColorMode}
           transition="transform .2s"
           _hover={{
-            transform: 'scale(1.5)',
+            transform: 'scale(1.2)',
           }}
+          p={0}
+          ml={[0, 0, 2]}
         >
           {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
         </Button>
