@@ -32,11 +32,11 @@ function Header() {
   const color = useColorModeValue('gray.600', 'white');
 
   return (
-    <Box px={[2, 4, 10, 10]} backgroundColor={bg} h={20}>
+    <Box px={[2, 4, 10, 10]} backgroundColor={bg} h={[16, 20, 20, 20]}>
       <Flex
         alignItems="flex-start"
         color={color}
-        transform={['translateY(55%)', 'translateY(55%)', 'translateY(40%)', 'translateY(40%)']}
+        transform={['translateY(36%)', 'translateY(55%)', 'translateY(40%)', 'translateY(40%)']}
       >
         <NextLink href="/" passHref>
           <RepeatIcon w={[8, 8, 10, 10]} h={[8, 8, 10, 10]} mr={3} color={color} />
@@ -45,7 +45,7 @@ function Header() {
           fontSize={['2xl', '2xl', '3xl', '3xl']}
           fontFamily={router.locale === 'en' ? 'Playfair Display' : 'Noto Serif TC'}
         >
-          {t('unicode-converter')}
+          <Box display={['none', 'block', 'block', 'block']}>{t('unicode-converter')}</Box>
         </Text>
         <Spacer />
         <NextLink href={pathname} locale={router.locale === 'en' ? 'tc' : 'en'} passHref>

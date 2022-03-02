@@ -1,8 +1,8 @@
-# Uvicode (A unicode converter)
+# MilkteaCode (A unicode converter)
 
 ## Link
 
-- Live site: [Uvicode](https://uvicode.vercel.app "Unicode Converter Site")
+- Live site: [MilkteaCode](https://milkteacode.vercel.app 'Unicode Converter Site')
 
 ## Screenshots
 

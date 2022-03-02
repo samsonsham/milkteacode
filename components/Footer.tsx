@@ -32,9 +32,12 @@ function Footer() {
           <NextLink href="/about" passHref>
             {t('about')}
           </NextLink>
+          <NextLink href="/contact" passHref>
+            {t('contact')}
+          </NextLink>
         </Stack>
         <Text>
-          © {year} Uvicode. {t('all-right-reserved')}
+          © {year} Milkteaholo. {t('all-right-reserved')}
         </Text>
       </Container>
     </Box>
