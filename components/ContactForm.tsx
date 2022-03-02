@@ -34,6 +34,9 @@ import {
   Slide,
 } from '@chakra-ui/react';
 
+// Icons
+import { MdSend, MdClear } from 'react-icons/md';
+
 export default function HookForm() {
   const { t } = useTranslation('common');
   const [check, setCheck] = useState(false);
@@ -164,11 +167,12 @@ export default function HookForm() {
                 {t('send-me-copy')}
               </Checkbox>
               <Spacer />
-              <Button mt={6} colorScheme="teal" type="button" onClick={() => reset()}>
+              <Button mt={6} colorScheme="red" type="button" onClick={() => reset()}>
+                <MdClear style={{ marginRight: '4px' }} />
                 {t('clear')}
               </Button>
-              <Button mt={6} ml={4} colorScheme="blue" isLoading={isSubmitting} type="submit">
-                {t('send')}
+              <Button mt={6} ml={3} colorScheme="blue" isLoading={isSubmitting} type="submit">
+                <MdSend style={{ marginRight: '4px' }} /> {t('send')}
               </Button>
             </Flex>
           </form>

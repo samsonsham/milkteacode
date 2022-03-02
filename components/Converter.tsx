@@ -17,6 +17,9 @@ import {
   Stack,
 } from '@chakra-ui/react';
 
+// Icons
+import { MdOutlineContentCopy, MdClear } from 'react-icons/md';
+
 // Helper
 import copy from 'copy-to-clipboard';
 import { helpers } from '../utils/converter-helper';
@@ -248,6 +251,7 @@ function Converter() {
         <Text fontWeight="bold">{t('character')}:</Text>
         <Spacer />
         <Button onClick={handleCopyChar} m={0} aria-label="Copy Character">
+          <MdOutlineContentCopy style={{ marginRight: '4px' }} />
           {hasCopiedChar ? <>{t('copied')}</> : <>{t('copy')}</>}
         </Button>
       </Stack>
@@ -285,6 +289,7 @@ function Converter() {
         </Text>
         <Spacer />
         <Button onClick={handleCopyU16} ml={2} aria-label={`Copy ${getEncodeType()}`}>
+          <MdOutlineContentCopy style={{ marginRight: '4px' }} />
           {hasCopiedU16 ? <>{t('copied')}</> : <>{t('copy')}</>}
         </Button>
       </Stack>
@@ -320,8 +325,8 @@ function Converter() {
           </RadioGroup>
         </Stack>
         <Spacer />
-        <Button colorScheme="teal" size="sm" onClick={handleClear} aria-label="Clear">
-          {t('clear')}
+        <Button colorScheme="red" onClick={handleClear} aria-label="Clear">
+          <MdClear style={{ marginRight: '4px' }} /> {t('clear')}
         </Button>
       </Stack>
       <Stack direction="row" alignItems="center" ml={2} mt={4}>

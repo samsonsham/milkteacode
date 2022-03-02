@@ -31,8 +31,9 @@ function Header() {
   const { t } = useTranslation('common');
   const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue('#d0e7e9', 'darkcyan');
-  const IconColor = useColorModeValue('yellow.500', 'yellow.200');
+  const IconColor = useColorModeValue('yellow.500', 'yellow.300');
   const color = useColorModeValue('gray.600', 'white');
+  const moonColor = useColorModeValue('yellow.500', 'orange.200');
 
   return (
     <Box px={[2, 4, 10, 10]} backgroundColor={bg} h={[14, 20, 20, 20]}>
@@ -88,6 +89,7 @@ function Header() {
             }}
             p={0}
             ml={[0, 0, 2]}
+            color={moonColor}
           >
             {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
           </Button>
