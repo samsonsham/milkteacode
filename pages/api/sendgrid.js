@@ -1,7 +1,7 @@
 import sendgrid from '@sendgrid/mail';
 
 sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
-
+console.log(process.env.SENDGRID_API_KEY);
 async function sendEmail(req, res) {
   const sendCopy = req.body.sendCopy;
   const msg = {
@@ -46,7 +46,7 @@ async function sendEmail(req, res) {
         console.error(error);
       });
   } catch (error) {
-    // console.log(error);
+    console.log(error);
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
 
