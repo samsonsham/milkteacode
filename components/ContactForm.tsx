@@ -27,7 +27,6 @@ import {
 
 export default function HookForm() {
   const [check, setCheck] = useState(false);
-  const [isShowingSent, setShowingSent] = useState(false);
   const { isOpen, onToggle } = useDisclosure();
   const {
     handleSubmit,
