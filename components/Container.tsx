@@ -15,8 +15,8 @@ const Main: FC<Props> = ({ children }) => {
   return (
     <Box backgroundColor={bgOuter}>
       <Head>
-        <title>Uvicode - A Unicode Converter</title>
-        <meta name="title" property="og:title" content="Uvicode - A Unicode Converter" />
+        <title>MilkteaCode - A Unicode Converter</title>
+        <meta name="title" property="og:title" content="MilkteaCode - A Unicode Converter" />
         <meta
           name="description"
           property="og:description"

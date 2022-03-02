@@ -1,7 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
+// React
 import { useEffect, useState } from 'react';
+
+// React Hook Form
 import { useForm } from 'react-hook-form';
+
+// i18n
+import { useTranslation } from 'next-i18next';
+
+// Chakra UI
 import {
   Alert,
   AlertIcon,
@@ -26,6 +35,7 @@ import {
 } from '@chakra-ui/react';
 
 export default function HookForm() {
+  const { t } = useTranslation('common');
   const [check, setCheck] = useState(false);
   const { isOpen, onToggle } = useDisclosure();
   const {
@@ -61,7 +71,7 @@ export default function HookForm() {
   return (
     <Box px={[4, 4, 8, 12]} pt={2} pb={12}>
       <Heading as="h1" fontSize={['2xl', '2xl', 'xl', 'xl']} pl={0} pt={4} mb={[0, 0, 6, 6]}>
-        Contact Us
+        {t('contact-us')}
       </Heading>
       <Wrap justify="center">
         <WrapItem
@@ -71,17 +81,16 @@ export default function HookForm() {
           minW={['80vw', '60vw', '40vw', '300px']}
         >
           <Box mr={[0, 0, 0, 2]} fontSize={['xl', 'xl', 'xl', 'xl']}>
-            <Text py={4}>Welcome to MilkteaCode!</Text>
-            <Text>
-              We hope you enjoy the tools. Please leave us some feedback so that we could provide
-              better user exprience.
-            </Text>
-            <Text py={4}>Thank you!</Text>
+            <Text py={4}>{t('contact-para-1')}</Text>
+            <Text>{t('contact-para-2')}</Text>
+            <Text py={4}>{t('contact-para-3')}</Text>
           </Box>
         </WrapItem>
         <Center display={['none', 'none', 'block', 'block']} h={500} px={4}>
           <Divider orientation="vertical" />
         </Center>
+        <Divider display={['block', 'block', 'none', 'none']} orientation="horizontal" />
+
         <WrapItem
           flex={1}
           p={0}
@@ -89,8 +98,13 @@ export default function HookForm() {
           minW={['80vw', '60vw', '40vw', '300px']}
         >
           <form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%', marginLeft: '0px' }}>
-            <FormControl isInvalid={errors.name}>
-              <FormLabel htmlFor="name">Name:</FormLabel>
+            <FormControl isInvalid={errors.name} mt={[4, 4, 0, 0]}>
+              <FormLabel htmlFor="name" fontSize={['xl', 'xl', 'md', 'md']}>
+                {t('name')}{' '}
+                <Text as="span" color="red.400">
+                  *
+                </Text>
+              </FormLabel>
               <Input
                 id="name"
                 placeholder="Jane"
@@ -105,7 +119,12 @@ export default function HookForm() {
               </Box>
             </FormControl>
             <FormControl isInvalid={errors.email} mt={4}>
-              <FormLabel htmlFor="email">Email address:</FormLabel>
+              <FormLabel htmlFor="email" fontSize={['xl', 'xl', 'md', 'md']}>
+                {t('email-address')}{' '}
+                <Text as="span" color="red.400">
+                  *
+                </Text>
+              </FormLabel>
               <Input
                 id="email"
                 type="email"
@@ -120,7 +139,12 @@ export default function HookForm() {
               </Box>
             </FormControl>
             <FormControl isInvalid={errors.msg} mt={4}>
-              <FormLabel htmlFor="msg">Message:</FormLabel>
+              <FormLabel htmlFor="msg" fontSize={['xl', 'xl', 'md', 'md']}>
+                {t('message')}{' '}
+                <Text as="span" color="red.400">
+                  *
+                </Text>
+              </FormLabel>
               <Textarea
                 id="msg"
                 placeholder="Hi!"
@@ -137,14 +161,14 @@ export default function HookForm() {
             </FormControl>
             <Flex>
               <Checkbox isChecked={check} onChange={() => setCheck(!check)}>
-                Send me copy
+                {t('send-me-copy')}
               </Checkbox>
               <Spacer />
-              <Button mt={6} colorScheme="gray" type="button" onClick={() => reset()}>
-                Reset
+              <Button mt={6} colorScheme="teal" type="button" onClick={() => reset()}>
+                {t('clear')}
               </Button>
               <Button mt={6} ml={4} colorScheme="blue" isLoading={isSubmitting} type="submit">
-                Send
+                {t('send')}
               </Button>
             </Flex>
           </form>
@@ -154,7 +178,7 @@ export default function HookForm() {
       <Slide direction="top" in={isOpen} style={{ zIndex: 10 }}>
         <Alert status="success">
           <AlertIcon />
-          Message sent!
+          {t('message-sent')}
         </Alert>
       </Slide>
     </Box>

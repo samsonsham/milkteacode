@@ -47,5 +47,15 @@
   "entity-num": "Entity Number",
   "desc": "Description",
   "iso10646-intro-1": "Universal Coded Character Set (UCS, Unicode) is a standard set of characters defined by the International Standard ISO/IEC 10646.",
-  "iso10646-intro-2": "Although the character codes and encoding forms are synchronized between Unicode and ISO/IEC 10646, the Unicode Standard imposes additional constraints on implementations to ensure that they treat characters uniformly across platforms and applications."
+  "iso10646-intro-2": "Although the character codes and encoding forms are synchronized between Unicode and ISO/IEC 10646, the Unicode Standard imposes additional constraints on implementations to ensure that they treat characters uniformly across platforms and applications.",
+  "contact-us": "Contact Us",
+  "contact-para-1": "Welcome to MilkteaCode!",
+  "contact-para-2": "We hope you enjoy the tools. Please leave us some feedback so that we could provide better user exprience.",
+  "contact-para-3": "Thank you!",
+  "name": "name:",
+  "email-address": "Email address:",
+  "message": "Message:",
+  "send-me-copy": "Send me copy",
+  "send": "Send",
+  "message-sent": "Message sent!"
 }
