@@ -7,14 +7,14 @@ async function sendEmail(req, res) {
   const msg = {
     to: ['samsonshamdev@gmail.com', sendCopy && req.body.email], // Change to your recipient
     from: 'milkteaholo@gmail.com', // Change to your verified sender
-    subject: 'Uvicode Contact Us', // 'Sending with SendGrid is Fun',
+    subject: 'MilkteaCode Contact Us', // 'Sending with SendGrid is Fun',
     text: 'and easy to do anywhere, even with Node.js',
     html: `<!DOCTYPE html>
     <html lang="en">
     <head>
       <meta charset="utf-8">
-      <title>Contact Unicode</title>
-      <meta name="description" content="Contact Unicode">
+      <title>Contact MilkteaCode</title>
+      <meta name="description" content="Contact MilkteaCode">
       <meta name="author" content="SitePoint">
       <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
     </head>
