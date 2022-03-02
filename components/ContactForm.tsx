@@ -116,6 +116,7 @@ export default function HookForm() {
                   required: 'This is required',
                   minLength: { value: 4, message: 'Minimum length should be 4' },
                 })}
+                aria-label="Input box for name"
               />
               <Box h={4} pt={2}>
                 <FormErrorMessage m={0}>{errors.name && errors.name.message}</FormErrorMessage>
@@ -136,6 +137,7 @@ export default function HookForm() {
                 {...register('email', {
                   required: 'Email is required',
                 })}
+                aria-label="Input box for email address"
               />
               <Box h={4} pt={2}>
                 <FormErrorMessage m={0}>{errors.email && errors.email.message}</FormErrorMessage>
@@ -157,21 +159,39 @@ export default function HookForm() {
                   minLength: { value: 4, message: 'Minimum length should be 4' },
                 })}
                 h={150}
+                aria-label="Input box for message"
               />
               <Box h={6} pt={2}>
                 <FormErrorMessage m={0}>{errors.msg && errors.msg.message}</FormErrorMessage>
               </Box>
             </FormControl>
             <Flex>
-              <Checkbox isChecked={check} onChange={() => setCheck(!check)}>
+              <Checkbox
+                isChecked={check}
+                onChange={() => setCheck(!check)}
+                aria-label="Send me Copy"
+              >
                 {t('send-me-copy')}
               </Checkbox>
               <Spacer />
-              <Button mt={6} colorScheme="red" type="button" onClick={() => reset()}>
+              <Button
+                mt={6}
+                colorScheme="red"
+                type="button"
+                onClick={() => reset()}
+                aria-label="Clear"
+              >
                 <MdClear style={{ marginRight: '4px' }} />
                 {t('clear')}
               </Button>
-              <Button mt={6} ml={3} colorScheme="blue" isLoading={isSubmitting} type="submit">
+              <Button
+                mt={6}
+                ml={3}
+                colorScheme="blue"
+                isLoading={isSubmitting}
+                type="submit"
+                aria-label="Send"
+              >
                 <MdSend style={{ marginRight: '4px' }} /> {t('send')}
               </Button>
             </Flex>

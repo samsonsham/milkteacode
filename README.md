@@ -14,6 +14,7 @@
 - Typescript
 - Chakra UI
 - i18next
+- SendGrid
 
 ## Changelog
 
