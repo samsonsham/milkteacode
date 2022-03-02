@@ -36,7 +36,7 @@ async function sendEmail(req, res) {
     </html>`,
   };
   try {
-    sendgrid
+    await sendgrid
       .send(msg, sendCopy)
       .then(() => {
         console.log('Email sent');
