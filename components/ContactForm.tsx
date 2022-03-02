@@ -59,19 +59,19 @@ export default function HookForm() {
     }
   }, [isOpen]);
   return (
-    <Box px={[2, 2, 8, 12]} pt={2} pb={12}>
-      <Heading as="h1" size="lg" pl={2} pt={4} mb={6}>
+    <Box px={[4, 4, 8, 12]} pt={2} pb={12}>
+      <Heading as="h1" fontSize={['2xl', '2xl', 'xl', 'xl']} pl={0} pt={4} mb={[0, 0, 6, 6]}>
         Contact Us
       </Heading>
       <Wrap justify="center">
         <WrapItem
           flex={1}
-          p={2}
+          p={0}
           w={['90vw', '85vw', '340px', '380px']}
           minW={['80vw', '60vw', '40vw', '300px']}
         >
-          <Box mr={[0, 0, 0, 2]}>
-            <Text py={0}>Welcome to MilkteaCode!</Text>
+          <Box mr={[0, 0, 0, 2]} fontSize={['xl', 'xl', 'xl', 'xl']}>
+            <Text py={4}>Welcome to MilkteaCode!</Text>
             <Text>
               We hope you enjoy the tools. Please leave us some feedback so that we could provide
               better user exprience.
@@ -79,16 +79,16 @@ export default function HookForm() {
             <Text py={4}>Thank you!</Text>
           </Box>
         </WrapItem>
-        <Center display={['none', 'none', 'block', 'block']} h={500}>
+        <Center display={['none', 'none', 'block', 'block']} h={500} px={4}>
           <Divider orientation="vertical" />
         </Center>
         <WrapItem
           flex={1}
-          p={2}
+          p={0}
           w={['90vw', '85vw', '340px', '380px']}
           minW={['80vw', '60vw', '40vw', '300px']}
         >
-          <form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%', marginLeft: '10px' }}>
+          <form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%', marginLeft: '0px' }}>
             <FormControl isInvalid={errors.name}>
               <FormLabel htmlFor="name">Name:</FormLabel>
               <Input
@@ -140,11 +140,11 @@ export default function HookForm() {
                 Send me copy
               </Checkbox>
               <Spacer />
-              <Button mt={6} colorScheme="blue" isLoading={isSubmitting} type="submit">
-                Send
-              </Button>
-              <Button mt={6} ml={4} colorScheme="gray" type="button" onClick={() => reset()}>
+              <Button mt={6} colorScheme="gray" type="button" onClick={() => reset()}>
                 Reset
+              </Button>
+              <Button mt={6} ml={4} colorScheme="blue" isLoading={isSubmitting} type="submit">
+                Send
               </Button>
             </Flex>
           </form>

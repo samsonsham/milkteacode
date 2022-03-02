@@ -34,12 +34,17 @@ function Header() {
   return (
     <Box px={[2, 4, 10, 10]} backgroundColor={bg} h={[16, 20, 20, 20]}>
       <Flex
-        alignItems="flex-start"
         color={color}
         transform={['translateY(36%)', 'translateY(55%)', 'translateY(40%)', 'translateY(40%)']}
       >
         <NextLink href="/" passHref>
-          <RepeatIcon w={[8, 8, 10, 10]} h={[8, 8, 10, 10]} mr={3} color={color} />
+          <RepeatIcon
+            w={[8, 8, 10, 10]}
+            h={[8, 8, 10, 10]}
+            mr={3}
+            ml={[2, 0, 0, 0]}
+            color={color}
+          />
         </NextLink>
         <Text
           fontSize={['2xl', '2xl', '3xl', '3xl']}

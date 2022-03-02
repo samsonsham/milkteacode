@@ -1,12 +1,11 @@
 // theme.ts
 
 // 1. import `extendTheme` function
-import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
-import { mode } from "@chakra-ui/theme-tools";
+import { extendTheme, type ThemeConfig } from '@chakra-ui/react';
 
 // 2. Add your color mode config
 const config: ThemeConfig = {
-  initialColorMode: "light",
+  initialColorMode: 'light',
   useSystemColorMode: false,
 };
 
@@ -18,33 +17,33 @@ const theme = extendTheme({
         p: 0,
         m: 0,
         fontFamily:
-          "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif",
+          '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
       },
       // styles for the `a`
       a: {
-        textDecoration: "none",
+        textDecoration: 'none',
       },
     }),
   },
   textStyles: {
     h1: {
       // you can also use responsive styles
-      fontSize: ["48px", "72px"],
-      border: "1px solid red",
-      fontWeight: "bold",
-      lineHeight: "110%",
-      letterSpacing: "-2%",
+      fontSize: ['48px', '72px'],
+      border: '1px solid red',
+      fontWeight: 'bold',
+      lineHeight: '110%',
+      letterSpacing: '-2%',
     },
     h2: {
-      fontSize: ["36px", "48px"],
-      fontWeight: "semibold",
-      lineHeight: "110%",
-      letterSpacing: "-1%",
+      fontSize: ['36px', '48px'],
+      fontWeight: 'semibold',
+      lineHeight: '110%',
+      letterSpacing: '-1%',
     },
     blockquote: {
-      fontSize: ["20px", "24px"],
-      fontFamily: "Times New Roman",
-      padding: "20px 20px 10px 20px",
+      fontSize: ['20px', '24px'],
+      fontFamily: 'Times New Roman',
+      padding: '20px 20px 10px 20px',
       _before: {
         content: '"\u201C"',
       },
@@ -53,9 +52,9 @@ const theme = extendTheme({
       },
     },
     figcaption: {
-      fontSize: ["16px", "20px"],
-      fontFamily: "Times New Roman",
-      padding: "0 20px 20px 20px",
+      fontSize: ['16px', '20px'],
+      fontFamily: 'Times New Roman',
+      padding: '0 20px 20px 20px',
       _before: {
         content: '"\u2014"',
       },
