@@ -39,7 +39,8 @@ function Header() {
     <Box px={[2, 4, 10, 10]} backgroundColor={bg} h={[14, 20, 20, 20]}>
       <Flex
         color={color}
-        transform={['translateY(30%)', 'translateY(55%)', 'translateY(40%)', 'translateY(40%)']}
+        alignItems="center"
+        transform={['translateY(20%)', 'translateY(55%)', 'translateY(40%)', 'translateY(40%)']}
       >
         <NextLink href="/" passHref>
           <RepeatIcon
